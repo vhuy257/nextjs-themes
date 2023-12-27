@@ -9,7 +9,7 @@ const Homepage = () => {
     if (isPending) return <div>Loading</div>
 
     return (
-        <div>
+        <div className='h-96 w-2/3'>
             <SliderComponent data={data.data.attributes.main_slider}/>
         </div>
     )
