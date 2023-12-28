@@ -12,10 +12,15 @@ export const kyOriginalApi = ky.create({
   prefixUrl: 'http://localhost:1337/api'  
 })
 
-export const buildQueryPopulate = () => {
+export const buildQueryHomePage = () => {
   return qs.stringify(
     {
-      populate: '*'
+      populate: {
+        restaurants: '*',
+        home_page_slides: {
+          populate: '*'
+        }
+      }
     }, 
     {
       encodeValuesOnly: true

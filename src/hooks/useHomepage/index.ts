@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { kyOriginalApi, buildQueryPopulate } from '@/lib/utils'
+import { kyOriginalApi, buildQueryHomePage } from '@/lib/utils'
 
 type ResponseData = {
   data: any[]
@@ -11,7 +11,7 @@ const useHomePage = (limit?: number) => {
   return useQuery({
     queryKey: ['index', limit],
     queryFn: async () => {
-      const  data : ResponseData = await kyOriginalApi.get(`home-page?${buildQueryPopulate()}`).json()
+      const  data : ResponseData = await kyOriginalApi.get(`home-page?${buildQueryHomePage()}`).json()
       return data
     },
   })

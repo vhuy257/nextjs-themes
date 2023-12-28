@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 import QueryProvider from '@/components/QueryProvider/QueryProvider'
-import { Inter } from 'next/font/google'
+import {  Anton } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const greateVibes = Anton({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: 'Query Tanstack Nextjs - Pokemon',
@@ -17,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={greateVibes.className}>
         <QueryProvider>
           {children}
         </QueryProvider>

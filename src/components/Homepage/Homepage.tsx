@@ -10,7 +10,7 @@ const Homepage = () => {
 
     return (
         <div className='h-96 w-2/3'>
-            <SliderComponent data={data.data.attributes.main_slider}/>
+            <SliderComponent data={data.data.attributes.home_page_slides}/>
         </div>
     )
 }
