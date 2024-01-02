@@ -19,6 +19,9 @@ export const buildQueryHomePage = () => {
         restaurants: '*',
         home_page_slides: {
           populate: '*'
+        },
+        about_us_home_page: {
+          populate: '*'
         }
       }
     }, 
