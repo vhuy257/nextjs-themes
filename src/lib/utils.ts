@@ -22,6 +22,9 @@ export const buildQueryHomePage = () => {
         },
         about_us_home_page: {
           populate: '*'
+        },
+        origin_inspiration: {
+          populate: '*'
         }
       }
     }, 

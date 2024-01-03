@@ -31,7 +31,9 @@ const SliderComponent = ({data}: any) => {
         slidesPerView={1}                
         autoplay={{
           delay: 5000,
+          disableOnInteraction: true
         }}                       
+        speed={5000}
         loop={true}
         grabCursor={true}        
       >

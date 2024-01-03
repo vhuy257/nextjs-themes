@@ -1,8 +1,10 @@
 "use client";
 import { useHomePage } from "@/hooks/useHomepage";
 import SliderComponent from "../Slider/Slider";
+import { ParallaxProvider } from "react-scroll-parallax";
 import React from "react";
 import AboutUsSection from "./AboutUsSection";
+import OriginInspiration from "./OriginInspiration";
 
 const Homepage = () => {
     const { data, isPending, isFetching }: any = useHomePage();
@@ -39,10 +41,13 @@ const Homepage = () => {
     if(!data) return null;
 
     return (
+      <ParallaxProvider>
         <div className="h-full overflow-hidden w-full">
-            <SliderComponent data={data.data.attributes.home_page_slides} />
-            <AboutUsSection data={data.data.attributes.about_us_home_page}/>
+            <SliderComponent data={data.data.attributes.home_page_slides}/>
+            <AboutUsSection  data={data.data.attributes.about_us_home_page}/>
+            <OriginInspiration data={data.data.attributes.origin_inspiration}/>
         </div>
+      </ParallaxProvider>
     );
 };
 
