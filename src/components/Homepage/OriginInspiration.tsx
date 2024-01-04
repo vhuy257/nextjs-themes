@@ -28,45 +28,45 @@ const OriginInspiration = ({ data }: any) => {
       </h1>
       <div className="flex w-full items-center gap-10 pr-10">
         <div className="slider-inspiration w-3/4 h-96 relative">
-           <Swiper
-                        modules={[Navigation, Scrollbar]}
-                        navigation={{
-                          enabled: true,
-                          nextEl: ".arrow-right", 
-                          prevEl: ".arrow-left"
-                        }}
-                        autoHeight={true}
-                        spaceBetween={20}
-                        slidesPerView={3}         
-                        autoplay={{
-                            delay: 5000,
-                            disableOnInteraction: true
-                        }}                       
-                        speed={5000}
-                        loop={true}
-                        grabCursor={true}     
-                        wrapperClass='swiper-wrapper'
-                    >        
+          <Swiper
+            modules={[Navigation, Scrollbar]}
+            navigation={{
+              enabled: true,
+              nextEl: ".arrow-right",
+              prevEl: ".arrow-left",
+            }}
+            autoHeight={true}
+            spaceBetween={20}
+            slidesPerView={3}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+            }}
+            speed={5000}
+            loop={true}
+            grabCursor={true}
+            wrapperClass="swiper-wrapper"
+          >
             {swiper_inspiration?.data.map((k: any, index: number) => (
-                                <SwiperSlide key={index} className="h-96 w-1/4">                             
-                                    <AspectRatio ratio={16/17}>
-                                        <Image 
-                                            src={k?.attributes.url} 
-                                            alt={k?.attributes.title} 
-                                            priority={true}
-                                            fill
-                                            className="object-cover"
-                                        />       
-                                    </AspectRatio>    
-                                </SwiperSlide>
-                            ))}
-            </Swiper>
-            <button className="arrow-left arrow absolute left-5 inset-y-1/2 text-2xl z-10 text-center h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
-                <ArrowLeftIcon className="mx-auto bg-white-600" />
-            </button>
-            <button className="arrow-right arrow absolute right-5 inset-y-1/2 text-2xl z-10 h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
-                <ArrowRightIcon className="mx-auto bg-white-600" />
-            </button>
+              <SwiperSlide key={index} className="h-96 w-1/4">
+                <AspectRatio ratio={16 / 17}>
+                  <Image
+                    src={k?.attributes.url}
+                    alt={k?.attributes.title}
+                    priority={true}
+                    fill
+                    className="object-cover"
+                  />
+                </AspectRatio>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button className="arrow-left arrow absolute left-5 inset-y-1/2 text-2xl z-10 text-center h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
+            <ArrowLeftIcon className="mx-auto bg-white-600" />
+          </button>
+          <button className="arrow-right arrow absolute right-5 inset-y-1/2 text-2xl z-10 h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
+            <ArrowRightIcon className="mx-auto bg-white-600" />
+          </button>
         </div>
         <div className="description text-left">
           <p

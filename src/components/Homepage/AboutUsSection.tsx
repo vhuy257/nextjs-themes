@@ -26,16 +26,16 @@ const AboutUsSection = ({ data }: any) => {
         <>     
             <div className="container mx-auto max-w-screen-2xl relative h-[760px]">
                 <div className="w-80 h-80 absolute -left-2 -top-10 z-10">
-                    <Parallax translateY={[100, 0]} rotate={[17, 9]} easing={'easeInOutCirc'} speed={-10} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
+                    <Parallax translateY={[100, 0]} rotate={[90, 0]} easing={'easeInOutCirc'} speed={-10} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={16/10}>
                             <Image src={image_1.data.attributes.url} fill alt={image_1.data.attributes.url}/>
                         </AspectRatio>
                     </Parallax>                
                 </div>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-40 h-40">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32">
                     <Parallax translateY={[100, 0]} easing={'easeInQuad'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={10/14}>
-                            <Image src={image_2.data.attributes.url} alt={title} fill className="-scale-x-100 -translate-x-7 -translate-y-8"/>
+                            <Image src={image_2.data.attributes.url} alt={title} fill className="-translate-x-4 -translate-y-8"/>
                         </AspectRatio>                        
                     </Parallax>                
                 </div>
@@ -57,7 +57,7 @@ const AboutUsSection = ({ data }: any) => {
                     <div className="h-80 w-2/6">
                         <Parallax translateY={[-15, 15]} easing={'easeInCirc'} speed={-5}>
                             <AspectRatio ratio={10/16}>
-                                <Image src={main_image.data[0].attributes.url} alt={title} fill className="brightness-75 saturate-100 grayscale-0  -translate-x-60 -translate-y-10"/>
+                                <Image src={main_image.data[0].attributes.url} alt={title} fill className="brightness-90 saturate-100 grayscale-0  -translate-x-60 -translate-y-10"/>
                             </AspectRatio>
                         </Parallax>       
                     </div>                                  
