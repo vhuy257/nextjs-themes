@@ -5,6 +5,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import React from "react";
 import AboutUsSection from "./AboutUsSection";
 import OriginInspiration from "./OriginInspiration";
+import MenuSection from "./MenuSection";
 
 const Homepage = () => {
     const { data, isPending, isFetching }: any = useHomePage();
@@ -46,6 +47,7 @@ const Homepage = () => {
             <SliderComponent data={data.data.attributes.home_page_slides}/>
             <AboutUsSection  data={data.data.attributes.about_us_home_page}/>
             <OriginInspiration data={data.data.attributes.origin_inspiration}/>
+            <MenuSection data={data.data.attributes.menu}/>
         </div>
       </ParallaxProvider>
     );

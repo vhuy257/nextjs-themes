@@ -25,7 +25,10 @@ export const buildQueryHomePage = () => {
         },
         origin_inspiration: {
           populate: '*'
-        }
+        },
+        menu: {
+          populate: '*'          
+        }        
       }
     }, 
     {
