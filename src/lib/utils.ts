@@ -28,6 +28,9 @@ export const buildQueryHomePage = () => {
         },
         menu: {
           populate: '*'          
+        },
+        rerservations: {
+          populate: '*'
         }        
       }
     }, 

@@ -6,6 +6,8 @@ import React from "react";
 import AboutUsSection from "./AboutUsSection";
 import OriginInspiration from "./OriginInspiration";
 import MenuSection from "./MenuSection";
+import Reservations from "./Reservations";
+import GetInTouch from "./GetInTouch";
 
 const Homepage = () => {
     const { data, isPending, isFetching }: any = useHomePage();
@@ -48,6 +50,13 @@ const Homepage = () => {
             <AboutUsSection  data={data.data.attributes.about_us_home_page}/>
             <OriginInspiration data={data.data.attributes.origin_inspiration}/>
             <MenuSection data={data.data.attributes.menu}/>
+            <Reservations data={data.data.attributes.rerservations}/>
+            <GetInTouch 
+              email={data.data.attributes.get_in_touch_email} 
+              phone={data.data.attributes.get_in_touch_phone}
+              address={data.data.attributes.find_us_address}
+              country={data.data.attributes.find_us_country}
+            />
         </div>
       </ParallaxProvider>
     );
