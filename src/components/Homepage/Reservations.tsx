@@ -15,27 +15,31 @@ const Reservations = ({data}: any) => {
                     Contact Us
                 </Button>
             </div>
-            <div className='w-96 h-[500px] absolute top-0 left-1/4'>
-                <AspectRatio ratio={7/10}>
+            <div className='w-96 h-[570px] absolute top-0 left-1/4'>
+                <AspectRatio ratio={12/16}>
                     <Image src={bg_image.data.attributes.url} alt={title} fill className='object-cover'/>
                 </AspectRatio>
             </div>
-            <div className='absolute right-0 -top-40 w-56 h-40'>
-                <AspectRatio ratio={12/9}>
-                    <Image src={image_1.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
-                </AspectRatio>
+            <div className='absolute right-0 -top-40 w-40 h-40'>
+                <Parallax translateY={[-45, 45]} easing={'easeInCirc'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 10, left: 100}}>
+                    <AspectRatio ratio={14/12}>
+                        <Image src={image_2.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
+                    </AspectRatio>
+                </Parallax>
             </div>
-            <div className='absolute right-0 bottom-40 w-56 h-40'>
-                    <Parallax translateY={[-15, 15]} easing={'easeInCirc'} speed={-5}>
-                        <AspectRatio ratio={20/9}>
-                                <Image src={image_3.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
-                        </AspectRatio>
-                    </Parallax>
+            <div className='absolute right-0 bottom-10 w-56 h-40'>
+                <Parallax translateY={[-85, 85]} easing={'easeInCirc'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 10, left: 100}}>
+                    <AspectRatio ratio={20/14}>
+                            <Image src={image_1.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
+                    </AspectRatio>
+                </Parallax>
             </div>
             <div className='absolute left-0 bottom-10 w-56 h-40'>
-                <AspectRatio ratio={23/20}>
-                    <Image src={image_2.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
-                </AspectRatio>
+                <Parallax translateY={[-55, 85]} easing={'easeInCirc'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 10, left: 100}}>
+                    <AspectRatio ratio={25/12}>
+                        <Image src={image_3.data.attributes.url} fill alt={title} className='object-cover -translate-x-1'/>
+                    </AspectRatio>
+                </Parallax>
             </div>
         </div>
     )

@@ -20,7 +20,7 @@ const MenuSection = ({data}: any) => {
     } = data;
 
     return (
-        <div className="flex container max-w-7xl mx-auto gap-5 mt-64 mb-64 items-start">
+        <div className="flex container max-w-7xl mx-auto gap-5 mt-64 mb-32 items-start">
             <div className="left relative w-1/2 h-[920px]">
                 <div className="absolute -top-20 -left-4 w-40 h-40">
                     <Parallax translateY={[0, -45]} easing={'easeInCirc'} speed={-5}>
@@ -37,21 +37,21 @@ const MenuSection = ({data}: any) => {
                     Menus
                     <span className="divider"></span>
                 </h1>
-                <div className="group_image w-[400px] h-[400px] absolute left-1/4 top-1/4 -translate-y-1/4 -translate-x-1/2">
+                <div className="group_image w-[400px] h-[650px] absolute left-1/4 -translate-x-1/2 top-1/4">
                     {menu_image?.data.map((k: any, index: number) => (
-                        <>
-                            <Image 
+                        <Parallax translateY={index % 2 !== 0 ? [6, -6] : [8, 16]} easing={'easeInOutBack'} speed={-5} key={index}>
+                            <Image                                 
                                 src={k.attributes.url} 
                                 alt={k.attributes.name} 
                                 width={bg_image_1.data.attributes.width} 
                                 height={bg_image_1.data.attributes.height}
-                                className={`object-contain ${index % 2 !== 0 && 'translate-x-56 -translate-y-[400px]'}`}
+                                className={`object-contain ${index % 2 !== 0 ? 'translate-x-80 -translate-y-[37rem]' : 'translate-x-16 -translate-y-36'}`}
                             />
-                        </>
+                        </Parallax>
                     ))}
                 </div>
                 <div className="absolute bottom-0 left-0 w-56 h-56">
-                    <Parallax translateY={[0, 45]} easing={'easeInCirc'} speed={-5}>
+                    <Parallax translateY={[0, -45]} easing={'easeInCirc'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={10/10}>
                             <Image src={bg_image_2.data.attributes.url} alt={bg_image_2.data.attributes.name} fill className='object-cover rotate-[145deg]'/>
                         </AspectRatio>

@@ -4,7 +4,9 @@ import { Parallax } from 'react-scroll-parallax';
 import { AspectRatio } from '../ui/aspect-ratio';
 import {  Jost } from 'next/font/google'
 import { useRef } from 'react'
-
+import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';
+import Link from 'next/link';
+    
 const jost = Jost({
   subsets: ['latin'],
   weight: '400'
@@ -21,6 +23,8 @@ const AboutUsSection = ({ data }: any) => {
         image_2,
         image_3,
     } = data;
+    
+    const content: BlocksContent = description;
 
     return (        
         <>     
@@ -35,14 +39,14 @@ const AboutUsSection = ({ data }: any) => {
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32">
                     <Parallax translateY={[100, 0]} easing={'easeInQuad'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={10/14}>
-                            <Image src={image_2.data.attributes.url} alt={title} fill className="-translate-x-4 -translate-y-8"/>
+                            <Image src={image_3.data.attributes.url} alt={title} fill className="-translate-x-4 -translate-y-8"/>
                         </AspectRatio>                        
                     </Parallax>                
                 </div>
                 <div className="absolute bottom-0 left-0 w-60 h-60">
                     <Parallax translateY={[-15, 15]} easing={[.645, .045, .355, 1]} speed={-5} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={10/10}>
-                            <Image src={image_3.data.attributes.url} fill alt={image_3.data.attributes.url}/>
+                            <Image src={image_2.data.attributes.url} fill alt={image_3.data.attributes.url}/>
                         </AspectRatio>
                     </Parallax>                        
                 </div>
@@ -52,12 +56,40 @@ const AboutUsSection = ({ data }: any) => {
                             {title}
                             <span className="divider"></span>
                         </h1>
-                        <h4 className={`${jost.className} text-2xl mt-5 max-w-[640px] leading-10`}>{description}</h4>
+                        <BlocksRenderer 
+                            content={content}
+                            blocks={{
+                                paragraph: ({ children }) => <p className={`${jost.className} text-2xl mt-5 max-w-[640px] leading-10`}>{children}</p>,
+                                heading: ({ children, level }) => {
+                                    switch (level) {
+                                    case 1:
+                                        return <h1>{children}</h1>
+                                    case 2:
+                                        return <h2>{children}</h2>
+                                    case 3:
+                                        return <h3>{children}</h3>
+                                    case 4:
+                                        return <h4>{children}</h4>
+                                    case 5:
+                                        return <h5>{children}</h5>
+                                    case 6:
+                                        return <h6>{children}</h6>
+                                    default:
+                                        return <p>{children}</p>
+                                    }
+                                },
+                                link: ({ children, url }) => <Link href={url}>{children}</Link>,
+                            }}
+                            modifiers={{
+                                bold: ({ children }) => <strong>{children}</strong>,
+                                italic: ({ children }) => <span className="italic">{children}</span>,
+                            }}
+                        />
                     </div>     
                     <div className="h-80 w-2/6">
                         <Parallax translateY={[-15, 15]} easing={'easeInCirc'} speed={-5}>
                             <AspectRatio ratio={10/16}>
-                                <Image src={main_image.data[0].attributes.url} alt={title} fill className="brightness-90 saturate-100 grayscale-0  -translate-x-60 -translate-y-10"/>
+                                <Image src={main_image.data.attributes.url} alt={title} fill className="brightness-90 saturate-100 grayscale-0 -translate-x-60 -translate-y-10"/>
                             </AspectRatio>
                         </Parallax>       
                     </div>                                  

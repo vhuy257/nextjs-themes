@@ -1,5 +1,5 @@
 "use client";
-import { useHomePage } from "@/hooks/useHomepage";
+import { useHomePage } from "@/hooks";
 import SliderComponent from "../Slider/Slider";
 import { ParallaxProvider } from "react-scroll-parallax";
 import React from "react";
@@ -8,6 +8,7 @@ import OriginInspiration from "./OriginInspiration";
 import MenuSection from "./MenuSection";
 import Reservations from "./Reservations";
 import GetInTouch from "./GetInTouch";
+import Testimonial from "./Testimonial";
 
 const Homepage = () => {
     const { data, isPending, isFetching }: any = useHomePage();
@@ -56,6 +57,9 @@ const Homepage = () => {
               phone={data.data.attributes.get_in_touch_phone}
               address={data.data.attributes.find_us_address}
               country={data.data.attributes.find_us_country}
+            />
+            <Testimonial 
+              data={data.data.attributes.testimonials.data}
             />
         </div>
       </ParallaxProvider>

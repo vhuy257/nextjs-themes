@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Navigation, Scrollbar } from "swiper/modules";
 import { Jost } from "next/font/google";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRightIcon, ArrowLeftIcon } from "@radix-ui/react-icons";
+import { ChevronRightIcon, ChevronLeftIcon } from "@radix-ui/react-icons";
 
 import "swiper/css";
-import { AspectRatio } from "../ui/aspect-ratio";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -27,7 +26,7 @@ const OriginInspiration = ({ data }: any) => {
         <span className="divider"></span>
       </h1>
       <div className="flex w-full items-center gap-10 pr-10">
-        <div className="slider-inspiration w-3/4 h-96 relative">
+        <div className="slider-inspiration w-4/6 flex justify-between gap-5 items-start h-96 relative">
           <Swiper
             modules={[Navigation, Scrollbar]}
             navigation={{
@@ -35,40 +34,38 @@ const OriginInspiration = ({ data }: any) => {
               nextEl: ".arrow-right",
               prevEl: ".arrow-left",
             }}
-            autoHeight={true}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={'auto'}
             autoplay={{
-              delay: 5000,
+              delay: 2000,
               disableOnInteraction: true,
             }}
-            speed={5000}
+            speed={1000}
             loop={true}
             grabCursor={true}
             wrapperClass="swiper-wrapper"
           >
             {swiper_inspiration?.data.map((k: any, index: number) => (
-              <SwiperSlide key={index} className="h-96 w-1/4">
-                <AspectRatio ratio={16 / 17}>
+              <SwiperSlide key={index} className={`flex justify-center items-center h-96 w-auto`}>
                   <Image
                     src={k?.attributes.url}
                     alt={k?.attributes.title}
                     priority={true}
-                    fill
-                    className="object-cover"
+                    width={k?.attributes.width}
+                    height={k?.attributes.height}
+                    className="object-cover h-[500px] w-auto"
                   />
-                </AspectRatio>
               </SwiperSlide>
             ))}
           </Swiper>
-          <button className="arrow-left arrow absolute left-5 inset-y-1/2 text-2xl z-10 text-center h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
-            <ArrowLeftIcon className="mx-auto bg-white-600" />
-          </button>
-          <button className="arrow-right arrow absolute right-5 inset-y-1/2 text-2xl z-10 h-10 w-10 bg-slate-100 hover:transition-all hover:bg-black duration-300 hover:text-white transition ease-in-out">
-            <ArrowRightIcon className="mx-auto bg-white-600" />
+          <button className="rounded-md arrow-left arrow absolute left-5 inset-y-1/2 text-4xl z-10 text-center h-10 w-10 bg-black opacity-15 hover:transition-all hover:-translate-x-2 hover:opacity-100 hover:bg-black duration-300 hover:text-white transition ease-in-out">
+            <ChevronLeftIcon className="mx-auto bg-white-600 text-white" width="34" height="34"/>
+          </button> 
+          <button className="rounded-md arrow-right arrow absolute right-5 inset-y-1/2 text-2xl z-10 h-10 w-10 bg-black opacity-15 hover:transition-all hover:opacity-85 hover:translate-x-2 hover:bg-black duration-300 hover:text-white transition ease-in-out">
+            <ChevronRightIcon className="mx-auto bg-white-600 text-white" width="34" height="34"/>
           </button>
         </div>
-        <div className="description text-left">
+        <div className="description text-left w-2/6">
           <p
             className={`text-lg ${jost.className} text-[--text-slider-title] pr-8`}
           >

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { kyOriginalApi, buildQueryHomePage } from '@/lib/utils'
+import { kyOriginalApi, buildQueryHomePage, buildFooter } from '@/lib/utils'
 
 type ResponseData = {
   data: any[]
@@ -17,4 +17,15 @@ const useHomePage = (limit?: number) => {
   })
 }
 
-export { useHomePage }
+
+const useFooter = () => {
+  return useQuery({
+    queryKey: ['footer'],
+    queryFn: async () => {
+      const  data : ResponseData = await kyOriginalApi.get(`footer?${buildFooter()}`).json()
+      return data.data
+    },
+  })
+}
+
+export { useHomePage, useFooter }

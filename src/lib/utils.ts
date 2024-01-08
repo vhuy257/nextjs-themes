@@ -31,11 +31,35 @@ export const buildQueryHomePage = () => {
         },
         rerservations: {
           populate: '*'
-        }        
+        },
+        testimonials: {
+          populate: '*'
+        }
       }
     }, 
     {
       encodeValuesOnly: true
+    }
+  )
+}
+
+export const buildFooter = () => {
+  return qs.stringify(
+    {
+      populate: {
+        logo: {
+          populate: '*'
+        },
+        site_info: {
+          populate: '*'
+        },
+        bg_image: {
+          populate: '*'
+        },
+        site_menus: {
+          populate: '*'
+        }
+      }
     }
   )
 }

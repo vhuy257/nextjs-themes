@@ -11,7 +11,6 @@ const jost = Jost({
   weight: '400'
 })
 
-import 'swiper/css';
 import 'swiper/css/effect-fade'
 import { Button } from '../ui/button';
 
@@ -25,13 +24,15 @@ const SliderComponent = ({data}: any) => {
         slidesPerView={1}                
         autoplay={{
           delay: 5000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
+          waitForTransition: false
         }}                       
         loop={true}
+        //onInit={(swiper) => {alert(swiper)}}
         grabCursor={true}        
       >
         {data?.data.map((k: any, index: number) => (
-          <SwiperSlide key={index} className="relative w-full mx-auto">     
+          <SwiperSlide key={index} className="relative w-full mx-auto" data-swiper-autoplay={index === 0 && '1000'}>     
             <div className="absolute w-full text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[960px] z-30 text-white ">
               <h1 className="text-8xl text-amber-500">{k.attributes.title}</h1>       
               <h4 className={`text-xl mt-3 text-[--text-slider-title] ${jost.className}`}>{k.attributes.desc}</h4>
