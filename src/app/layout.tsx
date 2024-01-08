@@ -3,6 +3,7 @@ import QueryProvider from '@/components/QueryProvider/QueryProvider'
 import {  Cormorant_Garamond } from 'next/font/google'
 import Header from '@/components/Layout/Header'
 import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
+
 import 'swiper/css';
 import './globals.css'
 import Footer from '@/components/Layout/Footer'

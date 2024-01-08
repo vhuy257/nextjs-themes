@@ -34,7 +34,7 @@
  
     --radius: 0.5rem;
 
-    --text-slider-title: #e3dac6;
+    --primary: #e3dac6;
     --main-background-color: rgb(7, 37, 45);
     --bg-footer: #05323A;
   }
@@ -129,7 +129,7 @@
 }
 
 .swiper-slide h1 {
-  color: var(--text-slider-title)
+  color: var(--primary)
 }
 
 .about-us-title {
@@ -143,8 +143,8 @@
   padding: 2px;
   margin-left: 15px;
   margin-right: 15px;
-  border-top: 1px solid var(--text-slider-title);
-  border-bottom: 1px solid var(--text-slider-title);
+  border-top: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 
 /* ----------------------------------------------
