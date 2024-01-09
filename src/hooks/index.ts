@@ -28,4 +28,14 @@ const useFooter = () => {
   })
 }
 
-export { useHomePage, useFooter }
+const useConfig = () => {
+  return useQuery({
+    queryKey: ['config'],
+    queryFn: async () => {
+      const data: ResponseData = await kyOriginalApi.get(`config?populate=*`).json()
+      return data.data
+    }
+  })
+}
+
+export { useHomePage, useFooter, useConfig }

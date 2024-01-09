@@ -51,7 +51,7 @@ const AboutUsSection = ({ data }: any) => {
                     </Parallax>                        
                 </div>
                 <div className="py-60 container mx-auto relative flex max-w-screen-xl justify-center items-start h-96" ref={ref}> 
-                    <div className="content text-[--text-slider-title] w-4/6 z-10">
+                    <div className="content text-[--primary] w-4/6 z-10">
                         <h1 className="text-8xl about-us-title">
                             {title}
                             <span className="divider"></span>

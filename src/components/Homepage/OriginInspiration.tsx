@@ -19,8 +19,8 @@ const OriginInspiration = ({ data }: any) => {
   const { title, description, swiper_inspiration, button_gallery } = data;
 
   return (
-    <div className="my-20 text-center">
-      <h1 className="text-6xl text-[--text-slider-title] pt-10 pb-10 flex justify-center items-center">
+    <div className="my-20 text-center" id="gallery">
+      <h1 className="text-6xl text-[--primary] pt-10 pb-10 flex justify-center items-center">
         <span className="divider"></span>
         {title}
         <span className="divider"></span>
@@ -53,7 +53,7 @@ const OriginInspiration = ({ data }: any) => {
                     priority={true}
                     width={k?.attributes.width}
                     height={k?.attributes.height}
-                    className="object-cover h-[500px] w-auto"
+                    className="object-cover max-h-[450px] w-auto"
                   />
               </SwiperSlide>
             ))}
@@ -67,13 +67,13 @@ const OriginInspiration = ({ data }: any) => {
         </div>
         <div className="description text-left w-2/6">
           <p
-            className={`text-lg ${jost.className} text-[--text-slider-title] pr-8`}
+            className={`text-lg ${jost.className} text-[--primary] pr-8`}
           >
             {description}
           </p>
           <Button
             variant="outline"
-            className="bg-transparent rounded-none text-xl py-6 px-8 text-[--text-slider-title] mt-5 border-[--text-slider-title]"
+            className="bg-transparent rounded-none text-xl py-6 px-8 text-[--primary] mt-5 border-[--primary]"
           >
             <Link href={"/#"}>{button_gallery}</Link>
           </Button>

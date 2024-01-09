@@ -79,10 +79,6 @@
   }
 }
 
-.mini-cart {
-  max-height: 350px;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

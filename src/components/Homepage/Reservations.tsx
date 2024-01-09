@@ -10,8 +10,8 @@ const Reservations = ({data}: any) => {
     return (
         <div className='container max-w-7xl text-right flex items-start relative h-[700px] justify-center'>
             <div className="reservations-title relative z-10">
-                <h1 className="text-8xl text-[--text-slider-title] flex justify-center items-center">{title}</h1>
-                <Button variant={'outline'} className='mt-7 bg-transparent rounded-none text-2xl py-6 px-8 text-[--text-slider-title] border-[--text-slider-title]'>
+                <h1 className="text-8xl text-[--primary] flex justify-center items-center">{title}</h1>
+                <Button variant={'outline'} className='mt-7 bg-transparent rounded-none text-2xl py-6 px-8 text-[--primary] border-[--primary]'>
                     Contact Us
                 </Button>
             </div>

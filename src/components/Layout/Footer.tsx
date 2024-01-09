@@ -13,11 +13,11 @@ const jost = Jost({
     weight: '400'
 })
 
-const Footer = () => {
+const Footer = (
+    { logo }: any
+) => {
     const { data, isPending, isFetching }: any = useFooter();    
     
-    //const subscribe_text: BlocksContent = data?.attributes?.subscribe_text;
-
     if(isPending) return null
 
     const { 
@@ -38,14 +38,14 @@ const Footer = () => {
                     <div className="w-40">
                         <Link href='/'>
                             <AspectRatio ratio={20/9}>
-                                <Image alt="Logo" src={data?.attributes.logo.logo.data.attributes.url} fill/>
+                                <Image alt="Logo" src={logo?.data?.attributes.url} fill/>
                             </AspectRatio>
                         </Link>
                     </div>                    
                     <BlocksRenderer 
                     content={data?.attributes?.subscribe_text}
                     blocks={{
-                        paragraph: ({ children }) => <p className={`${jost.className} text-lg text-[--text-slider-title] mt-3 mb-7`}>{children}</p>,
+                        paragraph: ({ children }) => <p className={`${jost.className} text-lg text-[--primary] mt-3 mb-7`}>{children}</p>,
                         heading: ({ children, level }) => {
                             switch (level) {
                             case 1:
@@ -71,11 +71,11 @@ const Footer = () => {
                         italic: ({ children }) => <span className="italic">{children}</span>,
                     }}
                     />
-                    <Button variant={'outline'} className='bg-transparent rounded-none text-xl py-6 px-8 text-[--text-slider-title] mt-5 border-[--text-slider-title]'>
+                    <Button variant={'outline'} className='bg-transparent rounded-none text-xl py-6 px-8 text-[--primary] mt-5 border-[--primary]'>
                         {data?.attributes?.subscribe_link}
                     </Button>
                 </div>
-                <div className="content text-[--text-slider-title] w-2/3 flex items-stretch justify-start gap-x-10 flex-wrap relative">       
+                <div className="content text-[--primary] w-2/3 flex items-stretch justify-start gap-x-10 flex-wrap relative">       
                     <div className="menu text-3xl">
                         <ul className='flex flex-col gap-4 font-semibold'>
                             {site_menus?.data.map((k: any, i: number) => (

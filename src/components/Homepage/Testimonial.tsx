@@ -12,18 +12,18 @@ const Testimonial = ({ data }: any) => {
 
     return (
       <div>
-        <h1 className="text-7xl text-[--text-slider-title] flex justify-center items-center mt-8">
+        <h1 className="text-7xl text-[--primary] flex justify-center items-center mt-8">
           Testimonials
           <span className="divider"></span>
         </h1>
         <div className="flex mt-10 items-center">
             <div className="left w-1/2">
-              <div className="description text-3xl text-center max-w-[70%] mx-auto text-[--text-slider-title]">
+              <div className="description text-3xl text-center max-w-[70%] mx-auto text-[--primary]">
                 <h2 className="text-6xl">&quot;</h2>
                 {testimonial}
                 <span className='text-6xl ml-3'>&quot;</span>
               </div>
-              <p className={`customer_name text-center mx-auto mt-8 text-2xl text-[--text-slider-title] ${jost.className}`}>
+              <p className={`customer_name text-center mx-auto mt-8 text-2xl text-[--primary] ${jost.className}`}>
                 {customer_name}
               </p>
             </div>

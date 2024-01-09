@@ -33,7 +33,7 @@ const MenuSection = ({data}: any) => {
                         />
                     </Parallax>
                 </div>
-                <h1 className="text-7xl text-[--text-slider-title] flex justify-center items-center">
+                <h1 className="text-7xl text-[--primary] flex justify-center items-center">
                     Menus
                     <span className="divider"></span>
                 </h1>
@@ -75,7 +75,7 @@ const MenuSection = ({data}: any) => {
                     </div>
                 ))}
                 <div className="text-center flex items-center mt-8">
-                    <Button variant={'outline'} className="py-6 px-4 border-2 border-[#FFFFFF45] rounded-none text-xl bg-transparent text-[--text-slider-title] mx-auto">
+                    <Button variant={'outline'} className="py-6 px-4 border-2 border-[#FFFFFF45] rounded-none text-xl bg-transparent text-[--primary] mx-auto">
                         <Link href="#">
                             View All Menus
                         </Link>
