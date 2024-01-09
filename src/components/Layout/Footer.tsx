@@ -33,9 +33,9 @@ const Footer = (
 
     return (
         <div className="bg-[--bg-footer]">
-            <div className="container mx-auto max-w-7xl flex items-center py-20 gap-20">
-                <div className="logo-footer w-1/3">
-                    <div className="w-40">
+            <div className="container mx-auto max-w-7xl flex items-center flex-wrap lg:flex-nowrap py-20 gap-20">
+                <div className="logo-footer w-full lg:w-1/3 text-center lg:text-left">
+                    <div className="w-40 mx-auto lg:mx-0">
                         <Link href='/'>
                             <AspectRatio ratio={20/9}>
                                 <Image alt="Logo" src={logo?.data?.attributes.url} fill/>
@@ -75,24 +75,24 @@ const Footer = (
                         {data?.attributes?.subscribe_link}
                     </Button>
                 </div>
-                <div className="content text-[--primary] w-2/3 flex items-stretch justify-start gap-x-10 flex-wrap relative">       
-                    <div className="menu text-3xl">
+                <div className="content text-[--primary] w-full lg:w-2/3 flex items-stretch justify-center lg:justify-start gap-x-10 flex-wrap relative">       
+                    <div className="menu text-xl lg:text-3xl w-full lg:w-auto">
                         <ul className='flex flex-col gap-4 font-semibold'>
                             {site_menus?.data.map((k: any, i: number) => (
-                                <li key={i}>
+                                <li key={i} className='text-center lg:text-left'>
                                     <Link href={k.attributes.link || '#'}>{k.attributes.text}</Link>                                                                                                
                                 </li>
                             ))}                            
                         </ul>
                     </div>
-                    <div className="address text-2xl flex justify-between flex-col gap-4">
-                        <div className="phone_email">
+                    <div className="address text-2xl flex justify-center lg:justify-between flex-col gap-4 mt-7 lg:mt-0">
+                        <div className="phone_email text-center lg:text-left">
                             <div className="phone">{phone}</div>
                             <div className="email">
                                 {email}
                             </div>
                         </div>
-                        <div className="address country">
+                        <div className="address country text-center lg:text-left">
                             <div className="address">
                                 {address}
                             </div>
@@ -101,7 +101,7 @@ const Footer = (
                             </div>
                         </div>
                     </div>
-                    <div className={`privacy-policy ${jost.className} w-full mt-10 flex gap-20 text-lg`}>
+                    <div className={`privacy-policy ${jost.className} w-full mt-10 flex gap-20 text-lg lg:items-center justify-center lg:justify-start`}>
                         <Link href="#">Privacy Policy</Link>
                         <Link href="#">Terms & Conditions</Link>
                     </div>

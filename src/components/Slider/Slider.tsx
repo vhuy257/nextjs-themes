@@ -30,6 +30,7 @@ const SliderComponent = ({data}: any) => {
         loop={true}
         //onInit={(swiper) => {alert(swiper)}}
         grabCursor={true}        
+        className='h-screen'
       >
         {data?.data.map((k: any, index: number) => (
           <SwiperSlide key={index} className="relative w-full mx-auto" data-swiper-autoplay={index === 0 && '1000'}>     
@@ -38,7 +39,7 @@ const SliderComponent = ({data}: any) => {
               <h4 className={`text-xl mt-3 text-[--text-slider-title] ${jost.className}`}>{k.attributes.desc}</h4>
               <Button variant={'outline'} className="mt-8 py-6 px-8 rounded-none text-2xl bg-transparent text-[--text-slider-title]">View Full Menu</Button>
             </div>
-            <AspectRatio ratio={16/9} className="swiper-slide-cover w-full h-full">              
+            <AspectRatio ratio={16/16} className="swiper-slide-cover w-auto h-screen">              
               <Image 
                 src={k?.attributes.image_slide.data[0].attributes.url} 
                 alt={k.attributes.title} 

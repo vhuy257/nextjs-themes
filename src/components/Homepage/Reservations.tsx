@@ -9,13 +9,13 @@ const Reservations = ({data}: any) => {
 
     return (
         <div className='container max-w-7xl text-right flex items-start relative h-[700px] justify-center'>
-            <div className="reservations-title relative z-10">
-                <h1 className="text-8xl text-[--primary] flex justify-center items-center">{title}</h1>
-                <Button variant={'outline'} className='mt-7 bg-transparent rounded-none text-2xl py-6 px-8 text-[--primary] border-[--primary]'>
+            <div className="reservations-title absolute lg:relative z-10 bottom-0 text-center lg:text-right">
+                <h1 className="text-4xl lg:text-8xl text-[--primary] flex justify-center items-center">{title}</h1>
+                <Button variant={'outline'} className='mt-7 bg-transparent rounded-none text-xl lg:text-2xl lg:py-6 lg:px-8 text-[--primary] border-[--primary]'>
                     Contact Us
                 </Button>
             </div>
-            <div className='w-96 h-[570px] absolute top-0 left-1/4'>
+            <div className='w-96 h-[570px] absolute top-0 left-1/2 -translate-x-1/2 transform z-20 lg:z-0'>
                 <AspectRatio ratio={12/16}>
                     <Image src={bg_image.data.attributes.url} alt={title} fill className='object-cover'/>
                 </AspectRatio>

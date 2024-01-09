@@ -19,14 +19,14 @@ const OriginInspiration = ({ data }: any) => {
   const { title, description, swiper_inspiration, button_gallery } = data;
 
   return (
-    <div className="my-20 text-center" id="gallery">
-      <h1 className="text-6xl text-[--primary] pt-10 pb-10 flex justify-center items-center">
-        <span className="divider"></span>
+    <div className="mt-80 lg:my-20 text-center" id="gallery">
+      <h1 className="text-4xl lg:text-6xl text-[--primary] pt-10 pb-10 flex justify-center items-center">
+        <span className="divider hidden lg:inline-block"></span>
         {title}
-        <span className="divider"></span>
+        <span className="divider hidden lg:inline-block"></span>
       </h1>
-      <div className="flex w-full items-center gap-10 pr-10">
-        <div className="slider-inspiration w-4/6 flex justify-between gap-5 items-start h-96 relative">
+      <div className="flex w-full items-center lg:gap-10 flex-wrap lg:flex-nowrap">
+        <div className="slider-inspiration w-full lg:w-dvw flex justify-between gap-20 items-start lg:h-96 relative">
           <Swiper
             modules={[Navigation, Scrollbar]}
             navigation={{
@@ -65,7 +65,7 @@ const OriginInspiration = ({ data }: any) => {
             <ChevronRightIcon className="mx-auto bg-white-600 text-white" width="34" height="34"/>
           </button>
         </div>
-        <div className="description text-left w-2/6">
+        <div className="description p-8 lg:p-0 lg:text-left w-full lg:w-2/5">
           <p
             className={`text-lg ${jost.className} text-[--primary] pr-8`}
           >

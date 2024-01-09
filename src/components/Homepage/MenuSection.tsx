@@ -20,8 +20,8 @@ const MenuSection = ({data}: any) => {
     } = data;
 
     return (
-        <div className="flex container max-w-7xl mx-auto gap-5 mt-64 mb-32 items-start">
-            <div className="left relative w-1/2 h-[920px]">
+        <div className="flex container max-w-7xl mx-auto gap-5 mt-36 lg:mt-64 mb-32 items-start flex-wrap lg:flex-nowrap" id="our-menu">
+            <div className="left relative w-1/2 h-[720px] lg:h-[920px]">
                 <div className="absolute -top-20 -left-4 w-40 h-40">
                     <Parallax translateY={[0, -45]} easing={'easeInCirc'} speed={-5}>
                         <Image 
@@ -33,11 +33,11 @@ const MenuSection = ({data}: any) => {
                         />
                     </Parallax>
                 </div>
-                <h1 className="text-7xl text-[--primary] flex justify-center items-center">
+                <h1 className="text-4xl lg:text-7xl text-[--primary] flex justify-center items-center">
                     Menus
                     <span className="divider"></span>
                 </h1>
-                <div className="group_image w-[400px] h-[650px] absolute left-1/4 -translate-x-1/2 top-1/4">
+                <div className="group_image w-[400px] lg:h-[650px] absolute left-0 lg:left-1/4 transform -translate-x-[70px] lg:-translate-x-1/2 top-1/4 z-10">
                     {menu_image?.data.map((k: any, index: number) => (
                         <Parallax translateY={index % 2 !== 0 ? [6, -6] : [8, 16]} easing={'easeInOutBack'} speed={-5} key={index}>
                             <Image                                 
@@ -58,7 +58,7 @@ const MenuSection = ({data}: any) => {
                     </Parallax>
                 </div>
             </div>
-            <div className="right w-1/2">
+            <div className="right w-full lg:w-1/2">
                 {menu_items.data.map((k: any, index: number) => (
                     <div className="menu-item p-8 border-b border-b-[#FFFFFF45]" key={index}>
                         <div className="flex justify-between items-center">
