@@ -86,7 +86,7 @@ const Header = ({ logo, logo_dark }: any) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact-us">
+                                <Link href="/contact-us" onClick={() => setOpen(false)}>
                                     Contact Us
                                 </Link>
                             </li>
