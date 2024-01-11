@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Jost } from 'next/font/google'
+import { Config } from '../Layout/Layout'
 
 const jost = Jost({
     subsets: ['latin'],
     weight: '400'
 })
   
-const GetInTouch = ({
-    email,
-    phone, 
-    address,
-    country
-}: any) => {
+const GetInTouch = () => {
+    const value = useContext(Config)
+    const {
+        email,
+        phone, 
+        address,
+        country
+    }: any = value
+    
     return (
         <div className='flex justify-center gap-10 items-center my-8 lg:my-20 container max-w-8xl p-5 lg:p-0 flex-wrap lg:flex-nowrap'>
             <div className="git flex justify-center lg:justify-end items-end relative lg:pl-20">

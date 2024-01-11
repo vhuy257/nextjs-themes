@@ -4,6 +4,8 @@ import Header from '@/components/Layout/Header'
 import Footer from '@/components/Layout/Footer'
 import { useConfig } from '@/hooks'
 
+export const Config = React.createContext({})
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const { data, isPending }: any = useConfig()
     
@@ -12,7 +14,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Header logo={data?.attributes?.logo} logo_dark={data?.attributes?.logo_dark}/>
-                {children}
+                <Config.Provider value={
+                    data.attributes
+                }>
+                    {children}
+                </Config.Provider>
             <Footer logo={data?.attributes?.logo}/>
         </>
     )
