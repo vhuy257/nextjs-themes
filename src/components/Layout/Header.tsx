@@ -45,8 +45,10 @@ const Header = ({ logo, logo_dark }: any) => {
                             </AspectRatio>
                         </Link>
                     </div>
-                    <Button className='animate-spin animate-infinite animate-duration-[5000ms] animate-ease-linear animate-normal animate-fill-backwards text-[--bg-footer] text-xl font-semibold rounded-full w-20 h-20 bg-[--primary] hover:bg-[--primary]' variant={'default'}>
-                        RSVP
+                    <Button className='animate-spin animate-infinite animate-duration-[5000ms] animate-ease-linear animate-normal animate-fill-backwards text-[--bg-footer] text-xl font-semibold rounded-full w-20 h-20 bg-[--primary] hover:bg-[--primary]' variant={'default'} asChild>
+                        <Link href="/contact-us">
+                            RSVP
+                        </Link>
                     </Button>
                 </div>
                 <SheetContent className="bg-[--primary] sm:max-w-full w-full">
@@ -61,8 +63,10 @@ const Header = ({ logo, logo_dark }: any) => {
                                 </AspectRatio>
                             </div>
                             <div className="rsvp">
-                                <Button className='animate-spin animate-infinite animate-duration-[5000ms] animate-ease-linear animate-normal animate-fill-backwards text-[--primary] text-xl font-semibold rounded-full w-20 h-20 bg-[--bg-footer] hover:bg-[--bg-footer]' variant={'default'}>
-                                    RSVP
+                                <Button className='animate-spin animate-infinite animate-duration-[5000ms] animate-ease-linear animate-normal animate-fill-backwards text-[--primary] text-xl font-semibold rounded-full w-20 h-20 bg-[--bg-footer] hover:bg-[--bg-footer]' variant={'default'} asChild>
+                                    <Link href="/contact-us">
+                                        RSVP
+                                    </Link>
                                 </Button>
                             </div>
                         </div>
