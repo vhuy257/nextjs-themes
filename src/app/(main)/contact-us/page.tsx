@@ -93,7 +93,7 @@ const ContactUs = () => {
         <Transition
             show={isShowing}
             enter="transition-all duration-2000"
-            enterFrom="-translate-y-2"
+            enterFrom="-translate-y-8"
             enterTo="translate-y-0"
         >
 

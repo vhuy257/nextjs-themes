@@ -21,24 +21,17 @@ const SliderComponent = ({data}: any) => {
         modules={[Navigation, Autoplay, EffectFade]}
         effect="fade"
         spaceBetween={50}
-        slidesPerView={1}                
+        slidesPerView={1}                        
         autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-          waitForTransition: false
-        }}                       
+          delay: 0
+        }}         
+        speed={4000}              
         loop={true}
-        //onInit={(swiper) => {alert(swiper)}}
         grabCursor={true}        
         className='h-screen'
       >
         {data?.data.map((k: any, index: number) => (
-          <SwiperSlide key={index} className="relative w-full mx-auto" data-swiper-autoplay={index === 0 && '1000'}>     
-            <div className="absolute w-full text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[960px] z-30 text-white ">
-              <h1 className="text-8xl text-amber-500">{k.attributes.title}</h1>       
-              <h4 className={`text-xl mt-3 text-[--text-slider-title] ${jost.className}`}>{k.attributes.desc}</h4>
-              <Button variant={'outline'} className="mt-8 py-6 px-8 rounded-none text-2xl bg-transparent text-[--text-slider-title]">View Full Menu</Button>
-            </div>
+          <SwiperSlide key={index} className="relative w-full mx-auto">                 
             <AspectRatio ratio={16/16} className="swiper-slide-cover w-auto h-screen">              
               <Image 
                 src={k?.attributes.image_slide.data[0].attributes.url} 
@@ -50,7 +43,16 @@ const SliderComponent = ({data}: any) => {
             </AspectRatio>
           </SwiperSlide>
         ))}
-      </Swiper>      
+      </Swiper>   
+      <div className="absolute w-full text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-8xl z-30 text-[--primary]">
+        <h1 className="text-8xl flex justify-center items-center">
+          <span className="divider"></span>
+          Taste Redefined
+          <span className="divider"></span>
+        </h1>       
+        <h4 className={`text-xl mt-3 ${jost.className}`}>Smokin’ Up a Storm, One Bite at a Time</h4>
+        <Button variant={'outline'} className="mt-8 py-6 px-8 rounded-none text-2xl bg-transparent">View Full Menu</Button>
+      </div>   
     </div>
   )
 }
