@@ -92,9 +92,9 @@ const ContactUs = () => {
     return (
         <Transition
             show={isShowing}
-            enter="transition-all duration-2000"
+            enter="transition-all ease-in-out duration-2000"
             enterFrom="-translate-y-8"
-            enterTo="translate-y-0"
+            enterTo="translate-y-0"            
         >
 
             <div className={`min-h-screen bg-[--main-background-color] pt-20`}>

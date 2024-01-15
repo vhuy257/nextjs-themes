@@ -1,9 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AspectRatio } from '@radix-ui/react-aspect-ratio'
-import { HamburgerMenuIcon, LockClosedIcon } from "@radix-ui/react-icons"
+import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { Button } from '../ui/button'
 import { useLenis } from '@studio-freight/react-lenis'
 
@@ -14,18 +14,32 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 
+const easingNumber = (x: number) => {
+    return 1 - Math.cos((x * Math.PI) / 2);
+}
+
 const Header = ({ logo, logo_dark }: any) => {
     const [ open, setOpen] = useState(false)
 
     const lenis = useLenis()
-    
+
+    useEffect(() => {        
+        if(window.location.hash) {
+            setTimeout(() => {
+                lenis.scrollTo(window.location.hash, {
+                    duration: 1,
+                    easing: easingNumber,
+                    lock: true
+                })           
+            }, 500)
+        }
+    }, [lenis])
+
     const handleClick = async (target: any) => {
         await setOpen(false)
         lenis.scrollTo(target, {
             duration: 1,
-            easing: (x: number) => {
-                return 1 - Math.cos((x * Math.PI) / 2);
-            }
+            easing: easingNumber
         })                                    
     }
 

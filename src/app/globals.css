@@ -110,7 +110,7 @@
 }
 
 .swiper-scale-effect .swiper-slide-cover {
-  transition: 10s ease-out;  
+  transition: all 10s ease-out;  
   transform: scale(1);
 }
 
