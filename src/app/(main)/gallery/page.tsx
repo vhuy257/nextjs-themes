@@ -24,7 +24,7 @@ const GalleryPage = () => {
         const { data }: ResponseData = await kyOriginalApi.get(`gallery-page?populate=*`).json();
 
         const { gallery }: any = data?.attributes;
-        setGallery(gallery)
+        setGallery(gallery?.data)
     }
 
     useEffect(() => {
@@ -47,7 +47,7 @@ const GalleryPage = () => {
                         <span className="divider"></span>                        
                     </h1>
                     <div className="grid grid-cols-3 gap-8 mt-12">
-                        {gallery?.data.map((k: any, index: number) => (
+                        {gallery.map((k: any, index: number) => (
                             <div className="overflow-hidden cursor-pointer" key={index}>
                                 <AspectRatio ratio={16/16}>
                                     <Image src={k.attributes.url} alt={k.name} fill className="object-cover transition-all ease-in-out duration-700 hover:scale-125"/>
