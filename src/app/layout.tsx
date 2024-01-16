@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import QueryProvider from '@/components/QueryProvider/QueryProvider'
 import {  Cormorant_Garamond } from 'next/font/google'
-import Header from '@/components/Layout/Header'
+
 import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
+import Layout from '@/components/Layout/Layout';
+
 import 'swiper/css';
 import './globals.css'
-import Footer from '@/components/Layout/Footer'
 
 const greateVibes = Cormorant_Garamond({
   subsets: ['latin'],
@@ -27,9 +28,9 @@ export default function RootLayout({
       <body className={greateVibes.className}>
         <QueryProvider>
           <SmoothScrolling>
-            <Header/>
-            {children}
-            <Footer/>
+            <Layout>
+              {children}
+            </Layout>
           </SmoothScrolling>
         </QueryProvider>
       </body>

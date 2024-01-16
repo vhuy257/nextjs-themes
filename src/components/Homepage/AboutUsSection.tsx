@@ -28,7 +28,7 @@ const AboutUsSection = ({ data }: any) => {
 
     return (        
         <>     
-            <div className="container mx-auto max-w-screen-2xl relative h-[760px]">
+            <div className="container mx-auto max-w-screen-2xl relative h-[760px]" id="about-us">
                 <div className="w-80 h-80 absolute -left-2 -top-10 z-10">
                     <Parallax translateY={[100, 0]} rotate={[90, 0]} easing={'easeInOutCirc'} speed={-10} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={16/10}>
@@ -36,7 +36,7 @@ const AboutUsSection = ({ data }: any) => {
                         </AspectRatio>
                     </Parallax>                
                 </div>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-32 hidden lg:inline-flex">
                     <Parallax translateY={[100, 0]} easing={'easeInQuad'} speed={-5} rootMargin={{top: 100, right: 100, bottom: 100, left: 100}}>
                         <AspectRatio ratio={10/14}>
                             <Image src={image_3.data.attributes.url} alt={title} fill className="-translate-x-4 -translate-y-8"/>
@@ -51,15 +51,15 @@ const AboutUsSection = ({ data }: any) => {
                     </Parallax>                        
                 </div>
                 <div className="py-60 container mx-auto relative flex max-w-screen-xl justify-center items-start h-96" ref={ref}> 
-                    <div className="content text-[--text-slider-title] w-4/6 z-10">
-                        <h1 className="text-8xl about-us-title">
+                    <div className="content text-[--primary] w-full lg:w-4/6 z-10">
+                        <h1 className="text-4xl lg:text-8xl about-us-title">
                             {title}
                             <span className="divider"></span>
                         </h1>
                         <BlocksRenderer 
                             content={content}
                             blocks={{
-                                paragraph: ({ children }) => <p className={`${jost.className} text-2xl mt-5 max-w-[640px] leading-10`}>{children}</p>,
+                                paragraph: ({ children }) => <p className={`${jost.className} text-2xl mt-5 w-full lg:max-w-[640px] leading-10`}>{children}</p>,
                                 heading: ({ children, level }) => {
                                     switch (level) {
                                     case 1:
@@ -86,10 +86,10 @@ const AboutUsSection = ({ data }: any) => {
                             }}
                         />
                     </div>     
-                    <div className="h-80 w-2/6">
+                    <div className="lg:h-80 lg:w-2/6 w-3/4 absolute lg:relative">
                         <Parallax translateY={[-15, 15]} easing={'easeInCirc'} speed={-5}>
                             <AspectRatio ratio={10/16}>
-                                <Image src={main_image.data.attributes.url} alt={title} fill className="brightness-90 saturate-100 grayscale-0 -translate-x-60 -translate-y-10"/>
+                                <Image src={main_image.data.attributes.url} alt={title} fill className="brightness-90 saturate-100 grayscale-0 lg:-translate-x-60 lg:-translate-y-10"/>
                             </AspectRatio>
                         </Parallax>       
                     </div>                                  

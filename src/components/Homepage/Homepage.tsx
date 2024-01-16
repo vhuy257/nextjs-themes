@@ -29,7 +29,7 @@ const Homepage = () => {
             cy="12"
             r="10"
             stroke="currentColor"
-            stroke-width="4"
+            strokeWidth="4"
           ></circle>
           <path
             className="opacity-75"
@@ -52,12 +52,7 @@ const Homepage = () => {
             <OriginInspiration data={data.data.attributes.origin_inspiration}/>
             <MenuSection data={data.data.attributes.menu}/>
             <Reservations data={data.data.attributes.rerservations}/>
-            <GetInTouch 
-              email={data.data.attributes.get_in_touch_email} 
-              phone={data.data.attributes.get_in_touch_phone}
-              address={data.data.attributes.find_us_address}
-              country={data.data.attributes.find_us_country}
-            />
+            <GetInTouch/>
             <Testimonial 
               data={data.data.attributes.testimonials.data}
             />
