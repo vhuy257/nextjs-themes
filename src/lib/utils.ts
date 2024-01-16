@@ -63,3 +63,11 @@ export const buildFooter = () => {
     }
   )
 }
+
+export const buildMenu = () => {
+  return qs.stringify(
+    {
+      populate: '*'
+    }
+  )
+}

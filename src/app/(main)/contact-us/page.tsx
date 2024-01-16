@@ -96,7 +96,6 @@ const ContactUs = () => {
             enterFrom="-translate-y-8"
             enterTo="translate-y-0"            
         >
-
             <div className={`min-h-screen bg-[--main-background-color] pt-20`}>
                 <div className="container max-w-8xl py-20">
                     <h1 className="text-[--primary] text-center text-4xl lg:text-7xl flex items-center justify-center relative">
