@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { Jost } from "next/font/google";
 import { Button } from "../ui/button";
+
 import Link from "next/link";
 import Image from "next/image";
+
 import { ChevronRightIcon, ChevronLeftIcon } from "@radix-ui/react-icons";
 import { useIntersectionObserver } from 'usehooks-ts'
 
@@ -24,8 +26,6 @@ const OriginInspiration = ({ data }: any) => {
   const entry = useIntersectionObserver(ref, {})
   const isVisible = !!entry?.isIntersecting
 
-  console.log(isVisible, 'isVisible')
-
   return (
     <div className="mt-80 lg:my-20 text-center" id="gallery" ref={ref}>
       <h1 className="text-4xl lg:text-6xl text-[--primary] pt-10 pb-10 flex justify-center items-center">
@@ -34,15 +34,14 @@ const OriginInspiration = ({ data }: any) => {
         <span className="divider hidden lg:inline-block"></span>
       </h1>
       <div className="flex w-full items-center lg:gap-10 flex-wrap lg:flex-nowrap">
-        <div className="slider-inspiration w-full lg:w-dvw flex justify-between gap-20 items-start lg:h-96 relative">
-          <Transition
+        <div className="slider-inspiration w-full lg:w-dvw flex justify-between gap-20 items-start lg:h-96 relative overflow-hidden">
+          <Transition 
+            appear={true}
             show={isVisible}
-            enter="transition-all delay-2000 ease-in-out duration-2000"
-            enterFrom="delay-2000 translate-x-full"
-            enterTo="delay-2000 translate-x-0"
-            leave="transition-all delay-2000 ease-in-out duration-2000" 
-            leaveFrom="delay-2000 translate-x-0"
-            leaveTo="delay-2000 translate-x-full"
+            unmount={false}
+            enter="transition-all ease-in-out duration-1000"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
           >
             <Swiper
               modules={[Navigation, Scrollbar]}
@@ -93,7 +92,7 @@ const OriginInspiration = ({ data }: any) => {
             variant="outline"
             className="bg-transparent rounded-none text-xl py-6 px-8 text-[--primary] mt-5 border-[--primary]"
           >
-            <Link href={"/#"}>{button_gallery}</Link>
+            <Link href={"/gallery"}>{button_gallery}</Link>
           </Button>
         </div>
       </div>
