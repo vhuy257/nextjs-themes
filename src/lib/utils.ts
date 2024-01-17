@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const kyOriginalApi = ky.create({
-  prefixUrl: 'http://localhost:1337/api'  
+  prefixUrl: 'https://trusty-desk-8c3c7017fe.strapiapp.com/api'
 })
 
 export const buildQueryHomePage = () => {
