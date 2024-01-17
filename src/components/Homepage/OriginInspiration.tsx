@@ -84,7 +84,7 @@ const OriginInspiration = ({ data }: any) => {
         </div>
         <div className="description p-8 lg:p-0 lg:text-left w-full lg:w-2/5">
           <p
-            className={`text-lg ${jost.className} text-[--primary] pr-8`}
+            className={`text-lg ${jost.className} text-[--primary] pr-36`}
           >
             {description}
           </p>
