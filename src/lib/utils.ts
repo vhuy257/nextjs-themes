@@ -8,8 +8,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export const API_URL = 'https://trusty-desk-8c3c7017fe.strapiapp.com/api'
+
 export const kyOriginalApi = ky.create({
-  prefixUrl: 'https://trusty-desk-8c3c7017fe.strapiapp.com/api'
+  prefixUrl: API_URL
 })
 
 export const buildQueryHomePage = () => {

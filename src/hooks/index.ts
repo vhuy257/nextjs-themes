@@ -54,4 +54,14 @@ const useCreateReservation = () => {
   })
 }
 
-export { useHomePage, useFooter, useConfig, useCreateReservation }
+const useMenuPage = () => {
+  return useQuery({
+    queryKey: ['menu'],
+    queryFn: async () => {
+      const data: ResponseData = await kyOriginalApi.get(`our-menu?populate=*`).json()
+      return data
+    }
+  })
+}
+
+export { useHomePage, useFooter, useConfig, useCreateReservation, useMenuPage }
