@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import Header from '@/components/Layout/Header'
-import Footer from '@/components/Layout/Footer'
+import Header from '@/components/restaurant/Layout/Header'
+import Footer from '@/components/restaurant/Layout/Footer'
 import { useConfig } from '@/hooks'
 
 export const Config = React.createContext({})

@@ -1,9 +1,10 @@
 'use client'
 import React, { useContext, useEffect, useState } from 'react'
 import { Jost } from 'next/font/google'
-import GetInTouch from '@/components/Homepage/GetInTouch';
+import GetInTouch from '@/components/restaurant/Homepage/GetInTouch';
 import { useForm } from "react-hook-form"
 import { Transition } from '@headlessui/react';
+
 import {
     Form,
     FormControl,
@@ -25,6 +26,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+
 import { Toaster } from "@/components/ui/sonner"
 import { toast } from "sonner"
 import { useCreateReservation } from '@/hooks';

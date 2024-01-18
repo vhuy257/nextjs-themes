@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import Image from 'next/image';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { Parallax } from 'react-scroll-parallax';
@@ -8,7 +8,7 @@ const Reservations = ({data}: any) => {
     const { title, bg_image, image_1, image_2, image_3 } = data;
 
     return (
-        <div className='container max-w-7xl text-right flex items-start relative h-[700px] justify-center'>
+        <div className='container max-w-7xl text-right flex items-start relative h-[700px] justify-center' id="reservation">
             <div className="reservations-title absolute lg:relative z-10 bottom-0 text-center lg:text-right">
                 <h1 className="text-4xl lg:text-8xl text-[--primary] flex justify-center items-center">{title}</h1>
                 <Button variant={'outline'} className='mt-7 bg-transparent rounded-none text-xl lg:text-2xl lg:py-6 lg:px-8 text-[--primary] border-[--primary]'>

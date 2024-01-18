@@ -4,9 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AspectRatio } from '@radix-ui/react-aspect-ratio'
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import { useLenis } from '@studio-freight/react-lenis'
 
+import { RESTAURANT_1_BASE_URL } from '@/lib/utils'
 import {
     Sheet,
     SheetClose,
@@ -28,8 +29,7 @@ const Header = ({ logo, logo_dark }: any) => {
             setTimeout(() => {
                 lenis.scrollTo(window.location.hash, {
                     duration: 1,
-                    easing: easingNumber,
-                    lock: true
+                    easing: easingNumber
                 })           
             }, 500)
         }
@@ -53,14 +53,14 @@ const Header = ({ logo, logo_dark }: any) => {
                         </SheetTrigger>
                     </div>
                     <div className="w-48 h-18">
-                        <Link href='/'>
+                        <Link href={`${RESTAURANT_1_BASE_URL}`}>
                             <AspectRatio ratio={20/9}>
                                 <Image alt="Logo" src={logo?.data?.attributes.url} fill/>
                             </AspectRatio>
                         </Link>
                     </div>
                     <Button className='animate-spin animate-infinite animate-duration-[5000ms] animate-ease-linear animate-normal animate-fill-backwards text-[--bg-footer] text-xl font-semibold rounded-full w-20 h-20 bg-[--primary] hover:bg-[--primary]' variant={'default'} asChild>
-                        <Link href="/contact-us">
+                        <Link href={`${RESTAURANT_1_BASE_URL}/contact-us`}>
                             RSVP
                         </Link>
                     </Button>
@@ -89,22 +89,22 @@ const Header = ({ logo, logo_dark }: any) => {
                                 Home
                             </li>
                             <li>
-                                <Link href="/#about-us" onClick={() => handleClick('#about-us')}>
+                                <Link href={`${RESTAURANT_1_BASE_URL}/#about-us`} onClick={() => handleClick('#about-us')}>
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/menu" onClick={() => setOpen(false)}>
+                                <Link href={`${RESTAURANT_1_BASE_URL}/menu`} onClick={() => setOpen(false)}>
                                     Our Menus
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#gallery" onClick={() => handleClick('#gallery')}>
+                                <Link href={`${RESTAURANT_1_BASE_URL}/#gallery`} onClick={() => handleClick('#gallery')}>
                                     Gallery
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact-us" onClick={() => setOpen(false)}>
+                                <Link href={`${RESTAURANT_1_BASE_URL}/contact-us`} onClick={() => setOpen(false)}>
                                     Contact Us
                                 </Link>
                             </li>

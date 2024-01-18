@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import { Parallax } from 'react-scroll-parallax';
-import { AspectRatio } from '../ui/aspect-ratio';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import {  Jost } from 'next/font/google'
 import { useRef } from 'react'
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';

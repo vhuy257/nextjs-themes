@@ -12,7 +12,7 @@ const jost = Jost({
 })
 
 import 'swiper/css/effect-fade'
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 
 const SliderComponent = ({data}: any) => {
   return (

@@ -8,7 +8,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const API_URL = 'https://trusty-desk-8c3c7017fe.strapiapp.com/api'
+export const API_URL = 'http://localhost:1337/api'
+
+export const RESTAURANT_1_BASE_URL = '/restaurant/1';
 
 export const kyOriginalApi = ky.create({
   prefixUrl: API_URL
@@ -72,4 +74,15 @@ export const buildMenu = () => {
       populate: '*'
     }
   )
+}
+
+export const chunkArray = (arr: any, n: number) => {
+    var chunkLength = Math.max(arr.length/n ,1);
+    var chunks = [];
+    
+    for (var i = 0; i < n; i++) {
+        if(chunkLength*(i+1)<=arr.length)chunks.push(arr.slice(chunkLength*i, chunkLength*(i+1)));
+    }
+
+    return chunks;
 }

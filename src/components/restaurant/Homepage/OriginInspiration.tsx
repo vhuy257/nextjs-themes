@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { Jost } from "next/font/google";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -13,6 +13,7 @@ import { useIntersectionObserver } from 'usehooks-ts'
 
 import "swiper/css";
 import { Transition } from "@headlessui/react";
+import { RESTAURANT_1_BASE_URL } from "@/lib/utils";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -92,7 +93,7 @@ const OriginInspiration = ({ data }: any) => {
             variant="outline"
             className="bg-transparent rounded-none text-xl py-6 px-8 text-[--primary] mt-5 border-[--primary]"
           >
-            <Link href={"/gallery"}>{button_gallery}</Link>
+            <Link href={`${RESTAURANT_1_BASE_URL}/gallery`}>{button_gallery}</Link>
           </Button>
         </div>
       </div>

@@ -1,10 +1,12 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { AspectRatio } from '../ui/aspect-ratio'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image from 'next/image'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import { Jost } from 'next/font/google'
+
+import { RESTAURANT_1_BASE_URL } from '@/lib/utils'
 import { useFooter } from '@/hooks'
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';
 
@@ -64,7 +66,7 @@ const Footer = (
                                 return <p>{children}</p>
                             }
                         },
-                        link: ({ children, url }) => <Link href={url}>{children}</Link>,
+                        link: ({ children, url }) => <Link href={`${url}`}>{children}</Link>,
                     }}
                     modifiers={{
                         bold: ({ children }) => <strong>{children}</strong>,
@@ -80,7 +82,7 @@ const Footer = (
                         <ul className='flex flex-col gap-4 font-semibold'>
                             {site_menus?.data.map((k: any, i: number) => (
                                 <li key={i} className='text-center lg:text-left'>
-                                    <Link href={k.attributes.link || '#'}>{k.attributes.text}</Link>                                                                                                
+                                    <Link href={`${RESTAURANT_1_BASE_URL}/${k.attributes.link}`}>{k.attributes.text}</Link>                                                                                                
                                 </li>
                             ))}                            
                         </ul>
