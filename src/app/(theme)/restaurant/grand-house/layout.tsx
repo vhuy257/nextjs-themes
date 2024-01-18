@@ -3,10 +3,10 @@ import QueryProvider from '@/components/QueryProvider/QueryProvider'
 import {  Cormorant_Garamond } from 'next/font/google'
 
 import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
-import Layout from '@/components/restaurant/Layout/Layout';
+import Layout from '@/components/restaurant/grand-house/Layout/Layout';
 
 import 'swiper/css';
-import './globals.css'
+import '@/app/(theme)/restaurant/globals.css'
 
 const greateVibes = Cormorant_Garamond({
   subsets: ['latin'],

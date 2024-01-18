@@ -37,6 +37,7 @@ const Header = ({ logo, logo_dark }: any) => {
 
     const handleClick = async (target: any) => {
         await setOpen(false)
+
         lenis.scrollTo(target, {
             duration: 1,
             easing: easingNumber

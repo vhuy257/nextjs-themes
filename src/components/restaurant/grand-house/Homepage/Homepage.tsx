@@ -10,7 +10,6 @@ import GetInTouch from "./GetInTouch";
 import Testimonial from "./Testimonial";
 
 const Homepage = ({ data }: any) => {
-
     return (
       <ParallaxProvider>
         <div className="h-full overflow-hidden w-full">

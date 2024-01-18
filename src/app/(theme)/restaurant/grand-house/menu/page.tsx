@@ -1,6 +1,6 @@
 import React from 'react'
 import { API_URL } from '@/lib/utils';
-import Menu from '@/components/restaurant/Menu/Menu';
+import Menu from '@/components/restaurant/grand-house/Menu/Menu';
 
 export default async function MenuPage() {
     const data: any = await fetch(`${API_URL}/our-menu?populate=*`, { 

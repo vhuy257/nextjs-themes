@@ -17,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        audrey: ['var(--font-audrey)'],
+        calibri: ['var(--font-calibri)'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

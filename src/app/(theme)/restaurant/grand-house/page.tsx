@@ -1,11 +1,10 @@
-import Homepage from "@/components/restaurant/Homepage/Homepage"
+import Homepage from "@/components/restaurant/grand-house/Homepage/Homepage"
 import { API_URL, buildQueryHomePage } from "@/lib/utils"
 
 export default async function Home() {
   const res: any = await fetch(`${API_URL}/home-page?${buildQueryHomePage()}`, { 
       next: { revalidate: 10 }
   })
-  
   const data = await res.json()
 
   return (

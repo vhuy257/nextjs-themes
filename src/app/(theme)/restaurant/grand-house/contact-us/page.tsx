@@ -1,7 +1,7 @@
 'use client'
 import React, { useContext, useEffect, useState } from 'react'
 import { Jost } from 'next/font/google'
-import GetInTouch from '@/components/restaurant/Homepage/GetInTouch';
+import GetInTouch from '@/components/restaurant/grand-house/Homepage/GetInTouch';
 import { useForm } from "react-hook-form"
 import { Transition } from '@headlessui/react';
 
