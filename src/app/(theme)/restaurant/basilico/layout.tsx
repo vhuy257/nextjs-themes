@@ -1,6 +1,8 @@
 import localFont from 'next/font/local'
 import 'swiper/css';
-import '@/app/(theme)/restaurant/globals.css'
+import '@/app/(theme)/restaurant/basilico/basilico.css'
+import Header from '@/components/restaurant/basilico/Layout/Header';
+import Footer from '@/components/restaurant/basilico/Layout/Footer';
 
 const audrey = localFont({
     src: './fonts/Audrey-Medium.otf',
@@ -24,8 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${audrey.variable} ${calibri.variable}`}>
+      <body className={`${audrey.variable} ${calibri.variable} ${calibri.className}`}>
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   )

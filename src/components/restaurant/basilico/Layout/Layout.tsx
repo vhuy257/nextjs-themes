@@ -6,7 +6,7 @@ const Layout = () => {
     return (
         <>
             <Header />
-                <main id="wrapper">Layout</main>
+            <main id="wrapper">Layout</main>
             <Footer />
         </>
     )

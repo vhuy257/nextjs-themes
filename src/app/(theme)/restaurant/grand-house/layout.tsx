@@ -6,7 +6,7 @@ import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
 import Layout from '@/components/restaurant/grand-house/Layout/Layout';
 
 import 'swiper/css';
-import '@/app/(theme)/restaurant/globals.css'
+import '@/app/(theme)/restaurant/grand-house/grand-house.css'
 
 const greateVibes = Cormorant_Garamond({
   subsets: ['latin'],

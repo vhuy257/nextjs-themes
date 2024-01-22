@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { Jost } from "next/font/google";
@@ -85,7 +85,7 @@ const OriginInspiration = ({ data }: any) => {
         </div>
         <div className="description p-8 lg:p-0 lg:text-left w-full lg:w-2/5">
           <p
-            className={`text-lg ${jost.className} text-[--primary] pr-36`}
+            className={`text-lg ${jost.className} text-[--primary] lg:pr-36`}
           >
             {description}
           </p>
