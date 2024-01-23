@@ -30,6 +30,7 @@
 }
 
 .btnDefault {
+    color: #000;
     background-image: linear-gradient(160deg, var(--foreground) 50%, #fff 50%);          
 }
 

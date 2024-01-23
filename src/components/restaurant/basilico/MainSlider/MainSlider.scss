@@ -1,7 +1,8 @@
 .slideItem {
     .title{
         font-family: var(--font-audrey);
-        @apply uppercase mb-4 text-white text-6xl
+        line-height: 1.25;
+        @apply uppercase mb-4 text-white text-6xl leading-tight
     }
 
     .sub-title {
@@ -14,6 +15,10 @@
         color: white;
     }
 
+    .content-box {
+        width: 60%;
+    }
+    
     .contact-info {
         width: 611px;
         height: 179px;

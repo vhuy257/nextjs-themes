@@ -1,0 +1,48 @@
+.testimonials {
+	padding: 136px 0 235px;
+	background: var(--background);
+	position: relative;
+	z-index: 1;
+
+    .testimonials-content {
+        img {
+            margin-bottom: 39px;
+        }
+
+        h4 {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 1.3px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 36px;
+            line-height: 32px;
+            letter-spacing: 0.75px;
+        }
+
+        h5 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 39px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+                color: var(--foreground)
+            }
+        }
+    }
+}

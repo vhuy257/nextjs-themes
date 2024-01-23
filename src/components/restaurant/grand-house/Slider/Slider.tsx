@@ -24,7 +24,7 @@ const SliderComponent = ({data}: any) => {
         slidesPerView={1}                        
         autoplay={{
           delay: 0
-        }}         
+        }}              
         speed={4000}              
         loop={true}
         grabCursor={true}        

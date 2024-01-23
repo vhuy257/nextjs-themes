@@ -9,7 +9,7 @@ import { IoLogoInstagram } from "react-icons/io"
 
 const Footer = () => {
   return (
-    <div className="bg-[--background] footer">
+    <footer className="bg-[--background] footer">
       <div className="container mx-auto p-10 pt-40">
         <div className="grid lg:grid-cols-4 text-white gap-8">
           <div className="col-item">
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
         </div>        
       </div>
-    </div>
+    </footer>
   )
 }
 

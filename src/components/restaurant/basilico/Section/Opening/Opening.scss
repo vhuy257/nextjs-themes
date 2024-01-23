@@ -1,0 +1,56 @@
+.opening {
+    position: relative;
+    padding: 0 0 188px;
+
+    .shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: rgb(249, 241, 232);
+        width: 477px;
+        height: 631px;
+    }
+    
+    .opening-content {
+        padding-top: 67px;
+
+        ul li {
+            font-size: 17px;
+            letter-spacing: 0.55px;
+
+            span {
+                color: var(--background);
+            }
+        }
+
+        .d-flex {
+            margin-top: 38px;
+
+            h5 {
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .opening-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 798px;
+        height: 634px;
+    }
+
+    .block-text .title {
+        margin-left: -3px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.4;
+        margin-bottom: 21px;
+        font-size: 40px;
+        font-family: var(--font-audrey);
+    }
+
+}

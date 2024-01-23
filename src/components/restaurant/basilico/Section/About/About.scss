@@ -1,0 +1,53 @@
+.about {
+    padding: 133px 0 74px;
+    position: relative;
+    width: 100%;
+    .shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(249, 241, 232);
+        width: 721px;
+        height: 650px;
+        z-index: -1;
+    }
+
+    .about-content {
+        padding-top: 72px;
+        margin-left: -30px;
+        padding-right: 43px;
+    }
+
+    .block-text {
+        .title {
+            margin-left: -3px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            font-size: 40px;
+            font-family: var(--font-audrey);
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            text-transform: uppercase;
+            color: var(--background);
+            letter-spacing: 2.7px;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 18px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 13px;
+                right: -76px;
+                width: 63px;
+                height: 1px;
+                background: var(--foreground);
+            }
+        }
+    }
+}

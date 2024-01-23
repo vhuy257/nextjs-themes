@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../ui/button';
 
 const ScrollToTop = ( { children }:{ children: React.ReactNode}) => {
@@ -23,7 +23,14 @@ const ScrollToTop = ( { children }:{ children: React.ReactNode}) => {
         }); 
     }; 
     
-    window.addEventListener('scroll', toggleVisible); 
+    useEffect(() => {
+
+        window.addEventListener('scroll', toggleVisible); 
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisible)
+        }
+    })
     
     return ( 
         <div style={{display: visible ? 'inline' : 'none'}}>

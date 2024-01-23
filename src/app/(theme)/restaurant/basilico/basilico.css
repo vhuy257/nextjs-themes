@@ -7,6 +7,8 @@
     :root {
       --background: #0e1927;
       --foreground: #e6c9a2;   
+      --swiper-navigation-size: 44px;
+      --swiper-theme-color: #007aff;
     }
    
     .dark {
@@ -15,8 +17,63 @@
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    color: #666666
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-calibri);
+    font-weight: 500;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;    
+}
+
 a:hover {
     transition: all 0.3s;
+}
+
+h3 {
+    font-family: var(--font-audrey);
+    font-size: 40px;
+}
+
+h4, 
+.h4 {
+	font-family: var(--font-audrey);
+	font-size: 28px;
+	line-height: 1.4;
+}
+
+h5 {
+    font-family: var(--font-audrey);
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .social-footer li a {
@@ -88,4 +145,14 @@ a:hover {
     border-radius: 50%;
     left: -16px;
     top: 8px;
+}
+
+@keyframes pulse-anim2 {
+    0% {
+        box-shadow: rgba(255, 255, 255, 0.4) 0 0 0 0;
+    }
+
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 20px;
+    }
 }

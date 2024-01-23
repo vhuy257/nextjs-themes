@@ -11,23 +11,23 @@ import 'swiper/css/effect-fade'
 
 const MainSlider = () => {
     return (
-        <div className="min-h-[calc(100vh-160px)] w-full">
+        <div className="max-h-[calc(100vh-160px)] w-full">
             <Swiper
                 modules={[Navigation, Autoplay, EffectFade]}
                 effect="fade"
                 spaceBetween={50}
                 slidesPerView={1}                        
                 autoplay={{
-                delay: 0
-                }}         
+                    delay: 0
+                }}                         
                 speed={4000}              
                 loop={true}
                 grabCursor={true}        
                 className='h-screen'
             >
-                <SwiperSlide className='w-auto max-h-[calc(100vh-160px)] relative'>                 
+                <SwiperSlide className='w-vsw h-[calc(100vh-160px)] relative'>                 
                     <div className={`slideItem`}>
-                        <div className="slide-banner absolute -z-1 left-0 right-0 top-0 bottom-0 w-full h-[calc(100vh-160px)]">
+                        <div className="slide-banner absolute -z-1 left-0 right-0 top-0 bottom-0 w-full max-h-[calc(100vh-160px)]">
                             <AspectRatio ratio={16/9}>              
                                 <Image 
                                     src={'/images/basilico_main_slider/img_slider_1.jpg'} 
