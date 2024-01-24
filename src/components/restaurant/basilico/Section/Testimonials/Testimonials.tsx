@@ -21,7 +21,6 @@ const Testimonials = () => {
                     }}   
                     loop={true}
                     grabCursor={false}        
-                    className='h-screen'
                 >
                     <SwiperSlide>                 
                         <div className="testimonials-content">

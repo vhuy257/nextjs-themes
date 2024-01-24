@@ -29,7 +29,7 @@ import {
 
 import { Toaster } from "@/components/ui/sonner"
 import { toast } from "sonner"
-import { useCreateReservation } from '@/hooks';
+import { useCreateReservation } from '@/hooks/useGrandHouseApi';
 import Image from 'next/image';
 
 import {

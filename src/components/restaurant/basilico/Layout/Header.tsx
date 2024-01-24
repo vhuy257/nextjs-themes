@@ -6,14 +6,18 @@ import ButtonComponent from '../Button/Button'
 import styles from '@/components/restaurant/basilico/Button/Button.module.css'
 import { Button } from '@/components/ui/button'
 import clsx from 'clsx'
+import useScrollTop from '@/hooks/useScrollTop'
 
 const Header = () => {
   const [show, toggleShow] = useState(false)
 
+  const { visible: visibleIsFixed } = useScrollTop(200)
+  const { visible: visibleIsSmall } = useScrollTop(300)
+
   return (
     <div>
       <div className={`${clsx('top-bar sticky bg-[--foreground]', {
-        'isShow': show
+        'isShow': show        
       })}`}>
         <div className="container mx-auto px-8 py-4 flex gap-5 flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center text-md font-calibri text-black">
           <div className="left-info flex gap-2 lg:gap-8 flex-wrap lg:flex-nowrap justify-center lg:justify-start">
@@ -31,7 +35,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="main-navigation bg-[--background]">
+      <div className={`${clsx('main-navigation bg-[--background] header', {
+        'is-fixed': visibleIsFixed,
+        'is-small': visibleIsSmall
+      })}`} id="header_main">
         <div className="container flex items-center justify-between px-5 py-3">
           <div className="main-logo w-40 h-20 flex items-center justify-center">
             <AspectRatio ratio={16/4}>

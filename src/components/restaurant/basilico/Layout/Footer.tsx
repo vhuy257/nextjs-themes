@@ -6,6 +6,7 @@ import { BiLogoFacebook } from "react-icons/bi";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TbMailFilled } from "react-icons/tb";
 import { IoLogoInstagram } from "react-icons/io"
+import { FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -83,7 +84,22 @@ const Footer = () => {
           <div className="col-item">
             <div className="widget">
               <h5>Latest New</h5>
-              <p className="mb-28">Register your email to not miss any news and offers from us! </p>
+              <p className="mb-8">Register your email to not miss any news and offers from us! </p>
+              <form>
+                  <div className="form-group">
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email *" />
+                  </div>
+                  <div className="form-check mt-4">
+                      <input type="checkbox" className="form-check-input mr-4" id="exampleCheck1" />
+                      <label className="form-check-label" htmlFor="exampleCheck1">
+                        I agree to the Privacy
+                          Policy
+                      </label>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    <FaTelegramPlane  size={24}/>
+                  </button>
+              </form>
             </div>
           </div>
         </div>        

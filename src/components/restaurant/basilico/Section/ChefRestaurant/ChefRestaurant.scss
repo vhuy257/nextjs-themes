@@ -1,0 +1,36 @@
+.chef-restaurant {
+	padding: 136px 0;
+
+    .chef-restaurant-content {
+        padding-left: 40px;
+        padding-top: 101px;
+        padding-right: 20px;
+    }
+
+    .block-text {
+        .subtitle {
+            font-size: 15px;
+            text-transform: uppercase;
+            color: var(--background);
+            letter-spacing: 2.7px;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 18px;
+        }        
+
+        .title {
+            margin-left: -3px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            margin-bottom: 21px;
+        }
+    }
+
+    .chef-restaurant-image .group-img {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}

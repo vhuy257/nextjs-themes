@@ -1,0 +1,71 @@
+.booking{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 134px 0 133px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .block-text {
+        .subtitle {
+            font-size: 15px;
+            text-transform: uppercase;
+            color: var(--foreground);
+            letter-spacing: 2.7px;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 22px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 13px;
+                right: -76px;
+                width: 63px;
+                height: 1px;
+                background: var(--foreground);
+            }
+        }
+
+        .title {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .text {
+            font-size: 17px;
+            color: #fff;
+        }
+    }
+
+    .form-control {
+        background: transparent;
+        border: 1px solid var(--foreground);
+        border-radius: 0;
+        color: #fff;
+        box-shadow: none;
+        padding: 14px;
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .form-group {
+        margin-bottom: 19px;
+    }
+
+    .form-row > .col, .form-row > [class*="col-"] {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}

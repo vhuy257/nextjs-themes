@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Jost } from 'next/font/google'
 
 import { RESTAURANT_1_BASE_URL } from '@/lib/utils'
-import { useFooter } from '@/hooks'
+import { useFooter } from '@/hooks/useGrandHouseApi'
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';
 
 const jost = Jost({

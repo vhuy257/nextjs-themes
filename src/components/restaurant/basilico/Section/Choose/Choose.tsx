@@ -7,7 +7,7 @@ import { Navigation } from 'swiper/modules';
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Button } from '@/components/ui/button'
 
-import ButtonComponent from '../Button/Button'
+import ButtonComponent from '../../Button/Button'
 import Image from 'next/image'
 
 import './Choose.scss'

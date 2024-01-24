@@ -1,36 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Button } from '../ui/button';
+import useScrollTop from '../../hooks/useScrollTop';
 
 const ScrollToTop = ( { children }:{ children: React.ReactNode}) => {
-    const [visible, setVisible] = useState(false) 
-    
-    const toggleVisible = () => { 
-        const scrolled = document.documentElement.scrollTop; 
-
-        if (scrolled > 300){ 
-            setVisible(true) 
-        }  
-        else if (scrolled <= 300){ 
-            setVisible(false) 
-        } 
-    }; 
-    
-    const scrollToTop = () =>{ 
-        window.scrollTo({ 
-            top: 0,  
-            behavior: 'smooth'            
-        }); 
-    }; 
-    
-    useEffect(() => {
-
-        window.addEventListener('scroll', toggleVisible); 
-
-        return () => {
-            window.removeEventListener('scroll', toggleVisible)
-        }
-    })
+    const {
+        visible,
+        scrollToTop
+    } = useScrollTop()
     
     return ( 
         <div style={{display: visible ? 'inline' : 'none'}}>

@@ -2,7 +2,7 @@
 import React from 'react'
 import Header from '@/components/restaurant/grand-house/Layout/Header'
 import Footer from '@/components/restaurant/grand-house/Layout/Footer'
-import { useConfig } from '@/hooks'
+import { useConfig } from '@/hooks/useGrandHouseApi'
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 
 export const Config = React.createContext({})

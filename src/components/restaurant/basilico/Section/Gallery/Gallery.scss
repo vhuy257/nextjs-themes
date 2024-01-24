@@ -1,0 +1,70 @@
+.gallery-box {
+    position: relative;
+
+    .content {
+        background: var(--background);
+        position: absolute;
+        top: 40px;
+        left: 25px;
+        right: 37px;
+        bottom: 38px;
+        padding: 90px 40px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.5);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        .name {
+            color: var(--foreground);
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            margin-bottom: 0;
+        }
+
+        .cate {
+            color: #fff;
+            margin-bottom: 18px;
+            letter-spacing: 0.6px;
+        }
+
+        .line {
+            width: 1px;
+            height: 31px;
+            background: var(--foreground);
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+        
+        .text {
+            color: #fff;
+            margin-bottom: 47px;
+            letter-spacing: 0.3px;
+        }
+
+        .action {
+            border: 1px solid var(--foreground);
+            padding: 16px 21px;
+            color: var(--foreground);
+
+            &:hover {
+                background: #e6c9a2;
+                color: #0e1927;
+            }
+
+            svg {
+                display: inline-block;
+            }
+        }
+    }
+
+    &:hover .content {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
