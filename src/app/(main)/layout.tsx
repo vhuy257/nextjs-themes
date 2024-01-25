@@ -3,7 +3,9 @@ import QueryProvider from '@/components/QueryProvider/QueryProvider'
 import {  Be_Vietnam_Pro } from 'next/font/google'
 
 import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
+
 import 'swiper/css';
+import './main.scss';
 
 const greateVibes = Be_Vietnam_Pro({
   subsets: ['latin'],

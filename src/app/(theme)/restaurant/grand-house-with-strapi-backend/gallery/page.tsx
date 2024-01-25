@@ -16,6 +16,7 @@ type ResponseData = {
 }
 
 const GalleryPage = () => {   
+
     const [isShowing, setShowing] = useState(false)
     const [gallery, setGallery]: any = useState([])
 
