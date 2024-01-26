@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={greateVibes.className}>
+      <body className={`${greateVibes.className}`}>
         <QueryProvider>
           <SmoothScrolling>
             <Layout>

@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import QueryProvider from '@/components/QueryProvider/QueryProvider'
 import {  Cormorant_Garamond } from 'next/font/google'
 
 import SmoothScrolling from '@/components/SmoothScrolling/SmoothScrolling'
-import Layout from '@/components/restaurant/grand-house/Layout/Layout';
 
 import 'swiper/css';
 import './grand-house.css'

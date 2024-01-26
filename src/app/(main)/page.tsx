@@ -14,7 +14,7 @@ export default function Home() {
     {
       title: 'Grand House - Asian Restaurant',
       imageUrl: '/thumbnail/grandhouse-homepage.png',
-      demoLink: '/restaurant/grand-house'
+      demoLink: '/restaurant/grand-house-with-strapi-backend'
     }    
   ];
 
@@ -47,7 +47,6 @@ export default function Home() {
                 </div>  
               )
             })}
-
           </div>
         </main>
       </>

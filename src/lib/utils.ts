@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const API_URL = 'http://localhost:1337/api'
 
-export const RESTAURANT_1_BASE_URL = '/restaurant/grand-house';
+export const RESTAURANT_1_BASE_URL = '/grand-house-with-strapi-backend';
 
 export const kyOriginalApi = ky.create({
   prefixUrl: API_URL
