@@ -34,13 +34,17 @@ export default function Home() {
               } = k;
 
               return (
-                <div className="theme-item p-4 border" key={index}>
-                  <Image src={imageUrl} alt={title} width={460} height={173}/>
-                  <div className="title text-md mt-4">
-                      {title}
-                  </div>
-                  <Button variant={'default'} className="mt-4 bg-teal-400 hover:bg-teal-600 transition-all text-white rounded-sm w-full p-4" asChild>
-                    <Link href={demoLink}>
+                <div className="theme-item border p-4" key={index}> 
+                  <Link href={demoLink} className="block">
+                      <Image src={imageUrl} alt={title} width={460} height={173}/>
+                  </Link>
+                  <Link href={demoLink} className="block">
+                      <h4 className="title text-md mt-4">
+                          {title}
+                      </h4>
+                  </Link>
+                  <Button variant={'default'} className="bg-teal-400 mt-8 hover:bg-teal-600 transition-all text-white uppercase font-thin rounded-sm w-full" asChild>
+                    <Link href={demoLink} key={index}>
                       View Demo
                     </Link>
                   </Button>
